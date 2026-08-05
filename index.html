@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seller Center - Dashboard Utama</title>
+    <!-- Tailwind CSS CDN untuk kemudahan styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 font-sans">
+
+    <div class="flex h-screen overflow-hidden">
+        
+        <!-- SIDEBAR -->
+        <aside class="w-64 bg-slate-900 text-white flex flex-col justify-between hidden md:flex">
+            <div>
+                <!-- Logo -->
+                <div class="h-16 flex items-center justify-center border-b border-slate-800 text-xl font-bold tracking-wide">
+                    <span class="text-indigo-500">TokoKita</span>&nbsp;Seller
+                </div>
+
+                <!-- Navigation -->
+                <nav class="mt-6 px-4 space-y-1">
+                    <a href="#" class="flex items-center gap-3 px-4 py-3 bg-indigo-600 text-white rounded-lg font-medium">
+                        <i class="fa-solid fa-chart-line w-5"></i> Dashboard
+                    </a>
+                    <a href="#" class="flex items-center gap-3 px-4 py-3 text-slate-400 hover:bg-slate-800 hover:text-white rounded-lg transition font-medium">
+                        <i class="fa-solid fa-box w-5"></i> Produk Saya
+                    </a>
+                    <a href="#" class="flex items-center gap-3 px-4 py-3 text-slate-400 hover:bg-slate-800 hover:text-white rounded-lg transition font-medium">
+                        <i class="fa-solid fa-cart-shopping w-5"></i> Pesanan
+                        <span class="ml-auto bg-amber-500 text-slate-900 text-xs font-bold px-2 py-0.5 rounded-full">3</span>
+                    </a>
+                    <a href="#" class="flex items-center gap-3 px-4 py-3 text-slate-400 hover:bg-slate-800 hover:text-white rounded-lg transition font-medium">
+                        <i class="fa-solid fa-wallet w-5"></i> Keuangan
+                    </a>
+                    <a href="#" class="flex items-center gap-3 px-4 py-3 text-slate-400 hover:bg-slate-800 hover:text-white rounded-lg transition font-medium">
+                        <i class="fa-solid fa-gear w-5"></i> Pengaturan Toko
+                    </a>
+                </nav>
+            </div>
+
+            <!-- Profile Info at Bottom -->
+            <div class="p-4 border-t border-slate-800 flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-indigo-500 flex items-center justify-center font-bold text-white">
+                    TB
+                </div>
+                <div>
+                    <p class="text-sm font-semibold">Toko Berkah Utama</p>
+                    <p class="text-xs text-slate-400">Status: <span class="text-emerald-400 font-medium">Aktif</span></p>
+                </div>
+            </div>
+        </aside>
+
+        <!-- MAIN CONTENT AREA -->
+        <div class="flex-1 flex flex-col overflow-y-auto">
+            
+            <!-- TOPBAR -->
+            <header class="h-16 bg-white border-b border-gray-200 px-6 flex items-center justify-between sticky top-0 z-10">
+                <div class="flex items-center gap-4">
+                    <button class="text-gray-500 md:hidden"><i class="fa-solid fa-bars text-xl"></i></button>
+                    <h1 class="text-xl font-bold text-gray-800">Dashboard Penjual</h1>
+                </div>
+                
+                <div class="flex items-center gap-4">
+                    <button class="relative text-gray-500 hover:text-gray-700">
+                        <i class="fa-regular fa-bell text-xl"></i>
+                        <span class="absolute -top-1 -right-1 w-2.5 h-2.5 bg-red-500 rounded-full"></span>
+                    </button>
+                    <div class="h-6 w-px bg-gray-200"></div>
+                    <a href="#" class="text-sm font-medium text-indigo-600 hover:underline flex items-center gap-1">
+                        <i class="fa-solid fa-store"></i> Lihat Toko
+                    </a>
+                </div>
+            </header>
+
+            <!-- CONTENT BODY -->
+            <main class="p-6 space-y-6">
+                
+                <!-- METRICS CARDS -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <!-- Card 1 -->
+                    <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <p class="text-sm font-medium text-gray-500">Total Penjualan</p>
+                                <h3 class="text-2xl font-bold text-gray-800 mt-1">Rp 12.450.000</h3>
+                            </div>
+                            <div class="p-2 bg-emerald-50 text-emerald-600 rounded-lg">
+                                <i class="fa-solid fa-arrow-trend-up"></i>
+                            </div>
+                        </div>
+                        <p class="text-xs text-emerald-600 mt-3 font-medium">+12.5% dibanding bulan lalu</p>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <p class="text-sm font-medium text-gray-500">Pesanan Baru</p>
+                                <h3 class="text-2xl font-bold text-gray-800 mt-1">18</h3>
+                            </div>
+                            <div class="p-2 bg-indigo-50 text-indigo-600 rounded-lg">
+                                <i class="fa-solid fa-bag-shopping"></i>
+                            </div>
+                        </div>
+                        <p class="text-xs text-amber-600 mt-3 font-medium">3 pesanan perlu dikirim hari ini</p>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <p class="text-sm font-medium text-gray-500">Pengunjung Toko</p>
+                                <h3 class="text-2xl font-bold text-gray-800 mt-1">1.240</h3>
+                            </div>
+                            <div class="p-2 bg-blue-50 text-blue-600 rounded-lg">
+                                <i class="fa-solid fa-users"></i>
+                            </div>
+                        </div>
+                        <p class="text-xs text-gray-500 mt-3 font-medium">Dalam 7 hari terakhir</p>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <p class="text-sm font-medium text-gray-500">Rating Toko</p>
+                                <h3 class="text-2xl font-bold text-gray-800 mt-1">4.8 <span class="text-sm font-normal text-gray-400">/ 5.0</span></h3>
+                            </div>
+                            <div class="p-2 bg-amber-50 text-amber-500 rounded-lg">
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                        <p class="text-xs text-gray-500 mt-3 font-medium">Dari total 156 ulasan</p>
+                    </div>
+                </div>
+
+                <!-- ORDERS & TASKS SECTION -->
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                    
+                    <!-- Table: Pesanan Terbaru (2 cols) -->
+                    <div class="lg:col-span-2 bg-white rounded-xl border border-gray-200 shadow-sm">
+                        <div class="p-5 border-b border-gray-200 flex justify-between items-center">
+                            <h2 class="font-bold text-gray-800">Pesanan Perlu Diproses</h2>
+                            <a href="#" class="text-sm text-indigo-600 hover:underline font-medium">Lihat Semua</a>
+                        </div>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left text-sm text-gray-600">
+                                <thead class="bg-gray-50 text-xs uppercase text-gray-400 font-semibold border-b border-gray-100">
+                                    <tr>
+                                        <th class="px-5 py-3">ID Pesanan</th>
+                                        <th class="px-5 py-3">Pembeli</th>
+                                        <th class="px-5 py-3">Total</th>
+                                        <th class="px-5 py-3">Status</th>
+                                        <th class="px-5 py-3 text-right">Aksi</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-gray-100">
+                                    <tr>
+                                        <td class="px-5 py-4 font-medium text-gray-800">#ORD-9021</td>
+                                        <td class="px-5 py-4">Budi Santoso</td>
+                                        <td class="px-5 py-4">Rp 250.000</td>
+                                        <td class="px-5 py-4">
+                                            <span class="px-2.5 py-1 text-xs rounded-full bg-amber-100 text-amber-700 font-medium">Perlu Dikirim</span>
+                                        </td>
+                                        <td class="px-5 py-4 text-right">
+                                            <button class="px-3 py-1 bg-indigo-600 text-white rounded text-xs font-medium hover:bg-indigo-700 transition">Proses</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-5 py-4 font-medium text-gray-800">#ORD-9020</td>
+                                        <td class="px-5 py-4">Siti Rahma</td>
+                                        <td class="px-5 py-4">Rp 120.000</td>
+                                        <td class="px-5 py-4">
+                                            <span class="px-2.5 py-1 text-xs rounded-full bg-amber-100 text-amber-700 font-medium">Perlu Dikirim</span>
+                                        </td>
+                                        <td class="px-5 py-4 text-right">
+                                            <button class="px-3 py-1 bg-indigo-600 text-white rounded text-xs font-medium hover:bg-indigo-700 transition">Proses</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-5 py-4 font-medium text-gray-800">#ORD-9018</td>
+                                        <td class="px-5 py-4">Andi Wijaya</td>
+                                        <td class="px-5 py-4">Rp 450.000</td>
+                                        <td class="px-5 py-4">
+                                            <span class="px-2.5 py-1 text-xs rounded-full bg-blue-100 text-blue-700 font-medium">Dikirim</span>
+                                        </td>
+                                        <td class="px-5 py-4 text-right">
+                                            <button class="px-3 py-1 bg-gray-100 text-gray-600 rounded text-xs font-medium hover:bg-gray-200 transition">Lacak</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Quick Actions & Stock Alert (1 col) -->
+                    <div class="space-y-6">
+                        <!-- Quick Actions -->
+                        <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm">
+                            <h2 class="font-bold text-gray-800 mb-4">Aksi Cepat</h2>
+                            <div class="grid grid-cols-2 gap-3">
+                                <button class="flex flex-col items-center justify-center p-3 border border-dashed border-gray-300 rounded-lg hover:border-indigo-500 hover:bg-indigo-50/50 transition group">
+                                    <i class="fa-solid fa-plus text-indigo-600 text-lg mb-1"></i>
+                                    <span class="text-xs font-medium text-gray-700 group-hover:text-indigo-600">Tambah Produk</span>
+                                </button>
+                                <button class="flex flex-col items-center justify-center p-3 border border-dashed border-gray-300 rounded-lg hover:border-indigo-500 hover:bg-indigo-50/50 transition group">
+                                    <i class="fa-solid fa-bullhorn text-indigo-600 text-lg mb-1"></i>
+                                    <span class="text-xs font-medium text-gray-700 group-hover:text-indigo-600">Buat Promosi</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Low Stock Warning -->
+                        <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm">
+                            <div class="flex items-center justify-between mb-3">
+                                <h2 class="font-bold text-gray-800">Stok Menipis</h2>
+                                <span class="text-xs bg-red-100 text-red-600 font-bold px-2 py-0.5 rounded-full">2 Produk</span>
+                            </div>
+                            <div class="space-y-3">
+                                <div class="flex items-center justify-between text-sm">
+                                    <span class="text-gray-600 truncate max-w-[150px]">Kemeja Polos Hitam XL</span>
+                                    <span class="text-red-500 font-semibold">Sisa 2</span>
+                                </div>
+                                <div class="flex items-center justify-between text-sm">
+                                    <span class="text-gray-600 truncate max-w-[150px]">Sepatu Sneaker White 42</span>
+                                    <span class="text-red-500 font-semibold">Sisa 1</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </main>
+        </div>
+    </div>
+
+</body>
+</html>
